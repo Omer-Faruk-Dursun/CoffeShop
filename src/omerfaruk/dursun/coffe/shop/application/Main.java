@@ -36,10 +36,10 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         int userSelection=0;
         /* If the user selects 0   : Menu will be displayed
-           If the user selects 1-6 : Corresponding coffee will be prepared
-           If the user selects 7   : Loop will end and program will close
+           If the user selects 1-7 : Corresponding coffee will be prepared
+           If the user selects 8   : Loop will end and program will close
          */
-        while(userSelection != 7) {
+        while(userSelection != 8) {
             if(userSelection == 0){
                 for(String menu:listOfProductNameAndPrice){
                     System.out.println(menu);
@@ -50,10 +50,11 @@ public class Main {
                 String coffeeNameAndPrice;
                 try {
                     // userSelection variable is used as a index to listOfProductNameAndPrice ArrayList
+                    userSelection--;
                     coffeeNameAndPrice = listOfProductNameAndPrice.get(userSelection);
                 } catch(IndexOutOfBoundsException e) {
                     System.out.println("Girdiğiniz indeks menü aralığında bulunmamaktadır.");
-                    System.out.println("Menüden seçim yapmak içim lütfen 1 ve 6 aralığında bir değer giriniz");
+                    System.out.println("Menüden seçim yapmak içim lütfen 1 ve 7 aralığında bir değer giriniz");
                     continue;
                 }
                 System.out.println("Teşekkürler kahveniz hazırlanıyor.");
@@ -61,6 +62,10 @@ public class Main {
                 Utility utility = new Utility();
                 String coffeeNameParsed = utility.parseCoffeeNameAndPrice(coffeeNameAndPrice);
 
+                // Using coffeeNameParsed as the key, get recipe String from ProductNameAndRecipe HashTable
+                String recipeString = ProductNameAndRecipe.get(coffeeNameParsed);
+                // Parse recipeString into separate material and quantity tokens (ex: 1x Espresso) using Utility class
+                ArrayList<String> recipeStringTokenized = utility.parseRecipe(recipeString);
 
 
             }
