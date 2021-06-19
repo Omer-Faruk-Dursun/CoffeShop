@@ -24,4 +24,9 @@ public class MaterialQuantity {
     public void setQuantity(Integer quantity) {
         this.quantity = quantity;
     }
+
+    public Material getMaterial() {
+        return material;
+    }
+
 }
