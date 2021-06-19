@@ -67,6 +67,24 @@ public class Main {
                 // Parse recipeString into separate material and quantity tokens (ex: 1x Espresso) using Utility class
                 ArrayList<String> recipeStringTokenized = utility.parseRecipe(recipeString);
 
+                // recipeProduct ArrayList will be used to create Product object
+                ArrayList<MaterialQuantity> recipeListOfProduct = new ArrayList<>();
+
+                for(String t : recipeStringTokenized){
+                    ArrayList<String> materialAndQuantityString = utility.parseMaterialAndQuantitiy(t);
+                    String materialName = materialAndQuantityString.get(1);
+                    Integer materialQuantity = Integer.parseInt(materialAndQuantityString.get(0));
+                    // Building Material object using the parsed recipe
+                    Material material = new Material(materialName);
+                    // Adding the materialQuantity object to recipeListOfProduct ArrayList
+                    recipeListOfProduct.add(new MaterialQuantity(material,materialQuantity));
+                }
+
+                // Building the Product object
+                Product product = new Product(coffeeNameParsed,12.0,recipeListOfProduct);
+                // Calling the toString method of Product object
+                System.out.println(product);
+
 
             }
             System.out.println("Lütfen içmek istediğiniz kahvenin numarasını giriniz");

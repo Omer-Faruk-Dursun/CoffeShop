@@ -20,12 +20,12 @@ public class Utility {
     }
 
     public ArrayList<String> parseMaterialAndQuantitiy(String recipeString){
-        ArrayList<String> xDD = new ArrayList<>();
+        ArrayList<String> materialAndQuantity = new ArrayList<>();
         String[] tokens = recipeString.split("x ");
         for(String t : tokens){
-            xDD.add(t);
+            materialAndQuantity.add(t);
         }
-        return xDD;
+        return materialAndQuantity;
     }
 
 }
