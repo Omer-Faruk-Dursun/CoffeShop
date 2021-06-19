@@ -12,11 +12,19 @@ import java.util.ArrayList;
 public class UtilityTest {
 
     @Test
-    public void parseCoffeeNameAndPriceTest(){
+    public void parseCoffeeNameTest(){
         Utility utility = new Utility();
         String returnString = utility.parseCoffeeName("Turkish Coffee (7 ₺)");
         String expected = "Turkish Coffee";
         Assert.assertEquals(expected,returnString);
+    }
+
+    @Test
+    public void parseCoffeePriceTest(){
+        Utility utility = new Utility();
+        Double returnDouble = utility.parseCoffeePrice("Turkish Coffee (7.25 ₺)");
+        Double expected = 7.25;
+        Assert.assertEquals(expected,returnDouble);
     }
 
     @Test
