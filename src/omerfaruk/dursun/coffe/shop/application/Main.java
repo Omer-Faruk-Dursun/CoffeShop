@@ -58,6 +58,10 @@ public class Main {
                 }
                 System.out.println("Teşekkürler kahveniz hazırlanıyor.");
 
+                Utility utility = new Utility();
+                String coffeeNameParsed = utility.parseCoffeeNameAndPrice(coffeeNameAndPrice);
+
+
 
             }
             System.out.println("Lütfen içmek istediğiniz kahvenin numarasını giriniz");
