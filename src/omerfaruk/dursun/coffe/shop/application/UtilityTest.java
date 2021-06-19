@@ -5,6 +5,10 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 
+/**
+ * UtilityTest class includes unit tests for Utility class
+ * @author Omer Faruk Dursun
+ */
 public class UtilityTest {
 
     @Test

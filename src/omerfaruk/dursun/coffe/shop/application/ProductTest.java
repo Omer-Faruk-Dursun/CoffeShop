@@ -4,7 +4,10 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.ArrayList;
-
+/**
+ * ProductTest class includes unit tests for Product class
+ * @author Omer Faruk Dursun
+ */
 public class ProductTest {
     @Test
     public void toStringTest(){
