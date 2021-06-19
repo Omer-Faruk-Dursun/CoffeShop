@@ -45,8 +45,20 @@ public class Main {
                     System.out.println(menu);
                 }
             }
+            // Inside the else branch selected coffee will be prepared according to the recipe list
             else{
+                String coffeeNameAndPrice;
+                try {
+                    // userSelection variable is used as a index to listOfProductNameAndPrice ArrayList
+                    coffeeNameAndPrice = listOfProductNameAndPrice.get(userSelection);
+                } catch(IndexOutOfBoundsException e) {
+                    System.out.println("Girdiğiniz indeks menü aralığında bulunmamaktadır.");
+                    System.out.println("Menüden seçim yapmak içim lütfen 1 ve 6 aralığında bir değer giriniz");
+                    continue;
+                }
                 System.out.println("Teşekkürler kahveniz hazırlanıyor.");
+
+
             }
             System.out.println("Lütfen içmek istediğiniz kahvenin numarasını giriniz");
             userSelection = scan.nextInt();
