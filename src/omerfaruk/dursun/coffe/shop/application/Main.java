@@ -6,6 +6,12 @@ import java.util.Scanner;
 
 public class Main {
 
+    public static void displayMenu(ArrayList<String> listOfProductNameAndPrice){
+        for(String menu:listOfProductNameAndPrice){
+            System.out.println(menu);
+        }
+    }
+
     public static void main(String[] args) {
         /* This ArrayList represents the list of coffee names and prices given in the document.
             Normally these values would be read from a file or fetched from a database.
@@ -34,33 +40,37 @@ public class Main {
         ProductNameAndRecipe.put("Hot Water",   "5x Hot Water");
 
         Scanner scan = new Scanner(System.in);
-        int userSelection=0;
         /* If the user selects 0   : Menu will be displayed
            If the user selects 1-7 : Corresponding coffee will be prepared
            If the user selects 8   : Loop will end and program will close
          */
+        int userSelection=0;
+        // TO-DO Separate User Interface logic from Business Logic
         while(userSelection != 8) {
             if(userSelection == 0){
-                for(String menu:listOfProductNameAndPrice){
-                    System.out.println(menu);
-                }
+                displayMenu(listOfProductNameAndPrice);
             }
             // Inside the else branch selected coffee will be prepared according to the recipe list
             else{
                 String coffeeNameAndPrice;
                 try {
-                    // userSelection variable is used as a index to listOfProductNameAndPrice ArrayList
+                    /*
+                    userSelection variable is used as a index to listOfProductNameAndPrice ArrayList,
+                    since ArrayList indexes start from 0 we subtract 1 form userSelection variable
+                     */
                     userSelection--;
                     coffeeNameAndPrice = listOfProductNameAndPrice.get(userSelection);
                 } catch(IndexOutOfBoundsException e) {
                     System.out.println("Girdiğiniz indeks menü aralığında bulunmamaktadır.");
                     System.out.println("Menüden seçim yapmak içim lütfen 1 ve 7 aralığında bir değer giriniz");
+                    userSelection = scan.nextInt();
                     continue;
                 }
                 System.out.println("Teşekkürler kahveniz hazırlanıyor.");
 
                 Utility utility = new Utility();
-                String coffeeNameParsed = utility.parseCoffeeNameAndPrice(coffeeNameAndPrice);
+                String coffeeNameParsed = utility.parseCoffeeName(coffeeNameAndPrice);
+                Double coffeePriceParsed = utility.parseCoffeePrice(coffeeNameAndPrice);
 
                 // Using coffeeNameParsed as the key, get recipe String from ProductNameAndRecipe HashTable
                 String recipeString = ProductNameAndRecipe.get(coffeeNameParsed);
@@ -81,7 +91,7 @@ public class Main {
                 }
 
                 // Building the Product object
-                Product product = new Product(coffeeNameParsed,12.0,recipeListOfProduct);
+                Product product = new Product(coffeeNameParsed,coffeePriceParsed,recipeListOfProduct);
                 // Calling the toString method of Product object
                 System.out.println(product);
 

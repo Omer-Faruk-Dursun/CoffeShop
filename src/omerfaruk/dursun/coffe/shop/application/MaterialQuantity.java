@@ -1,10 +1,11 @@
 package omerfaruk.dursun.coffe.shop.application;
 /**
  * The Material class represents a material and quantity of that material.
+ * Material and MaterialQuantity classes have Composition relationship.
  * @author Omer Faruk Dursun
  */
 public class MaterialQuantity {
-    private Material material;
+    private final Material material;
     private Integer quantity;
 
     /**
@@ -19,10 +20,6 @@ public class MaterialQuantity {
 
     public Integer getQuantity() {
         return quantity;
-    }
-
-    public void setQuantity(Integer quantity) {
-        this.quantity = quantity;
     }
 
     public Material getMaterial() {

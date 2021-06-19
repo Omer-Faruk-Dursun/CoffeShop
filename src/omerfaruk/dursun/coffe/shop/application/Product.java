@@ -7,7 +7,7 @@ import java.util.ArrayList;
  * @author Omer Faruk Dursun
  */
 public class Product {
-    private String productName;
+    private final String productName;
     private Double price;
     private ArrayList<MaterialQuantity> recipe;
 
@@ -21,14 +21,6 @@ public class Product {
         this.productName = productName;
         this.price = price;
         this.recipe = recipe;
-    }
-
-    public String getProductName() {
-        return productName;
-    }
-
-    public void setProductName(String productName) {
-        this.productName = productName;
     }
 
     public Double getPrice() {
@@ -58,6 +50,7 @@ public class Product {
             returnString.append(material.getQuantity()).append(" adet ").append(material.getMaterial().getName()).append(" ");
         }
         returnString.append("içermektedir.");
+        returnString.append(" Ürünümüzün fiyatı ").append(price).append(" ₺'dır.");
         return returnString.toString();
     }
 

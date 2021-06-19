@@ -8,14 +8,25 @@ import java.util.ArrayList;
  */
 public class Utility {
     /**
-     * Parses the given coffee name and price string into separate coffee name and price
+     * Parses the given coffee name and price string into separate coffee name
      * @param coffeeNameAndPrice String that contains coffee name and price
      * @return Coffee Name String
      */
-    public String parseCoffeeNameAndPrice(String coffeeNameAndPrice){
+    public String parseCoffeeName(String coffeeNameAndPrice){
         String coffeeName = coffeeNameAndPrice.substring( 0, coffeeNameAndPrice.indexOf("("));
         coffeeName = coffeeName.substring(0, coffeeName.length() - 1);
         return coffeeName;
+    }
+
+    /**
+     * Parses the given coffee name and price string into coffee price
+     * @param coffeeNameAndPrice String that contains coffee name and price
+     * @return Coffee Price String
+     */
+    public Double parseCoffeePrice(String coffeeNameAndPrice){
+        String coffeePrice = coffeeNameAndPrice.substring(coffeeNameAndPrice.indexOf("(")+1,coffeeNameAndPrice.indexOf(")"));
+        String priceValue = coffeePrice.substring(0, coffeePrice.indexOf(" "));
+        return Double.parseDouble(priceValue);
     }
 
     /**

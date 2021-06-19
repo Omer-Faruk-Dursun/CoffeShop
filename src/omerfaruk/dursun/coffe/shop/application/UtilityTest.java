@@ -14,7 +14,7 @@ public class UtilityTest {
     @Test
     public void parseCoffeeNameAndPriceTest(){
         Utility utility = new Utility();
-        String returnString = utility.parseCoffeeNameAndPrice("Turkish Coffee (7 ₺)");
+        String returnString = utility.parseCoffeeName("Turkish Coffee (7 ₺)");
         String expected = "Turkish Coffee";
         Assert.assertEquals(expected,returnString);
     }
