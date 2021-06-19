@@ -71,7 +71,7 @@ public class Main {
                 ArrayList<MaterialQuantity> recipeListOfProduct = new ArrayList<>();
 
                 for(String t : recipeStringTokenized){
-                    ArrayList<String> materialAndQuantityString = utility.parseMaterialAndQuantitiy(t);
+                    ArrayList<String> materialAndQuantityString = utility.parseMaterialAndQuantity(t);
                     String materialName = materialAndQuantityString.get(1);
                     Integer materialQuantity = Integer.parseInt(materialAndQuantityString.get(0));
                     // Building Material object using the parsed recipe
