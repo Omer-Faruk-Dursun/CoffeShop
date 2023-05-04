@@ -1,7 +1,9 @@
 package omerfaruk.dursun.coffe.shop.application;
+
 /**
  * The Material class represents the ingredients that make up the different kinds of coffee.
  * Material and MaterialQuantity classes have Composition relationship.
+ *
  * @author Omer Faruk Dursun
  */
 public class Material {
@@ -10,6 +12,7 @@ public class Material {
 
     /**
      * Material Constructor with name field
+     *
      * @param name Materials name
      */
     public Material(String name) {

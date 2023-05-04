@@ -6,7 +6,7 @@ package omerfaruk.dursun.coffe.shop.application;
  */
 public class MaterialQuantity {
     private final Material material;
-    private Integer quantity;
+    private final Integer quantity;
 
     /**
      * Material Constructor with material and quantity fields
