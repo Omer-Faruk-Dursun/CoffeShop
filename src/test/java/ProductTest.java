@@ -1,5 +1,6 @@
-package omerfaruk.dursun.coffe.shop.application;
-
+import omerfaruk.dursun.coffe.shop.application.Material;
+import omerfaruk.dursun.coffe.shop.application.MaterialQuantity;
+import omerfaruk.dursun.coffe.shop.application.Product;
 import org.junit.Assert;
 import org.junit.Test;
 

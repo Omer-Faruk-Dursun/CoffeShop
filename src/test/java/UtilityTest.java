@@ -1,5 +1,4 @@
-package omerfaruk.dursun.coffe.shop.application;
-
+import omerfaruk.dursun.coffe.shop.application.Utility;
 import org.junit.Assert;
 import org.junit.Test;
 
