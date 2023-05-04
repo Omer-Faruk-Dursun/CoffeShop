@@ -1,4 +1,4 @@
-package omerfaruk.dursun.coffe.shop.application;
+package omerfaruk.dursun.coffe.shop.application.material;
 
 /**
  * The Material class represents the ingredients that make up the different kinds of coffee.

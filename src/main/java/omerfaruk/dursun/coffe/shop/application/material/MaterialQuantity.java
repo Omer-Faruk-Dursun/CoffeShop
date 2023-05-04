@@ -1,4 +1,4 @@
-package omerfaruk.dursun.coffe.shop.application;
+package omerfaruk.dursun.coffe.shop.application.material;
 /**
  * The MaterialQuantity class represents a material and quantity of that material.
  * Material and MaterialQuantity classes have Composition relationship.

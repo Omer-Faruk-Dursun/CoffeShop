@@ -1,4 +1,6 @@
-package omerfaruk.dursun.coffe.shop.application;
+package omerfaruk.dursun.coffe.shop.application.product;
+
+import omerfaruk.dursun.coffe.shop.application.material.MaterialQuantity;
 
 import java.util.ArrayList;
 

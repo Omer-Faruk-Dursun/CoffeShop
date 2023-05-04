@@ -1,6 +1,6 @@
-import omerfaruk.dursun.coffe.shop.application.Material;
-import omerfaruk.dursun.coffe.shop.application.MaterialQuantity;
-import omerfaruk.dursun.coffe.shop.application.Product;
+import omerfaruk.dursun.coffe.shop.application.material.Material;
+import omerfaruk.dursun.coffe.shop.application.material.MaterialQuantity;
+import omerfaruk.dursun.coffe.shop.application.product.Product;
 import org.junit.jupiter.api.Test;
 
 

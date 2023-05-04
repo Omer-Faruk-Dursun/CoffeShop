@@ -1,5 +1,10 @@
 package omerfaruk.dursun.coffe.shop.application;
 
+import omerfaruk.dursun.coffe.shop.application.material.Material;
+import omerfaruk.dursun.coffe.shop.application.material.MaterialQuantity;
+import omerfaruk.dursun.coffe.shop.application.product.Product;
+import omerfaruk.dursun.coffe.shop.application.util.Utility;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;

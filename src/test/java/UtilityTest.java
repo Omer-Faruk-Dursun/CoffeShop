@@ -1,4 +1,4 @@
-import omerfaruk.dursun.coffe.shop.application.Utility;
+import omerfaruk.dursun.coffe.shop.application.util.Utility;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package omerfaruk.dursun.coffe.shop.application;
+package omerfaruk.dursun.coffe.shop.application.util;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -43,9 +43,8 @@ public class Utility {
      */
     public ArrayList<String> parseRecipe(String recipeString) {
         String[] tokens = recipeString.split(", ");
-        ArrayList<String> tokenizedRecipe = new ArrayList<>(Arrays.asList(tokens));
 
-        return tokenizedRecipe;
+        return new ArrayList<>(Arrays.asList(tokens));
     }
 
     /**
@@ -56,9 +55,8 @@ public class Utility {
      */
     public ArrayList<String> parseMaterialAndQuantity(String recipeTokenString) {
         String[] tokens = recipeTokenString.split("x ");
-        ArrayList<String> materialAndQuantity = new ArrayList<>(Arrays.asList(tokens));
 
-        return materialAndQuantity;
+        return new ArrayList<>(Arrays.asList(tokens));
     }
 
 }
