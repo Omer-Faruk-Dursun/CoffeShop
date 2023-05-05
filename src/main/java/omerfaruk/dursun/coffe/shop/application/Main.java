@@ -35,15 +35,15 @@ public class Main {
         /* This HashMap represents the coffee names and recipes given in the document.
             Normally these values would be read from a file or fetched from a database.
          */
-        HashMap<String, String> ProductNameAndRecipe = new HashMap<>();
+        HashMap<String, String> productNameAndRecipe = new HashMap<>();
         // Add keys and values according to the document (Product Name, Ingredients)
-        ProductNameAndRecipe.put("Espresso", "1x Espresso");
-        ProductNameAndRecipe.put("Double Espresso", "2x Espresso");
-        ProductNameAndRecipe.put("Americano", "1x Espresso, 4x Hot Water");
-        ProductNameAndRecipe.put("Cappuccino", "1x Espresso, 2x Steamed Milk, 2x Milk Foam");
-        ProductNameAndRecipe.put("Cafe Latte", "1x Espresso, 3x Steamed Milk, 1x Milk Foam");
-        ProductNameAndRecipe.put("Mocha", "1x Espresso, 1x Steamed Milk, 1x Milk Foam, 2x Hot Chocolate");
-        ProductNameAndRecipe.put("Hot Water", "5x Hot Water");
+        productNameAndRecipe.put("Espresso", "1x Espresso");
+        productNameAndRecipe.put("Double Espresso", "2x Espresso");
+        productNameAndRecipe.put("Americano", "1x Espresso, 4x Hot Water");
+        productNameAndRecipe.put("Cappuccino", "1x Espresso, 2x Steamed Milk, 2x Milk Foam");
+        productNameAndRecipe.put("Cafe Latte", "1x Espresso, 3x Steamed Milk, 1x Milk Foam");
+        productNameAndRecipe.put("Mocha", "1x Espresso, 1x Steamed Milk, 1x Milk Foam, 2x Hot Chocolate");
+        productNameAndRecipe.put("Hot Water", "5x Hot Water");
 
         Scanner scan = new Scanner(System.in);
         /* If the user selects 0   : Menu will be displayed
@@ -79,7 +79,7 @@ public class Main {
                 Double coffeePriceParsed = utility.parseCoffeePrice(coffeeNameAndPrice);
 
                 // Using coffeeNameParsed as the key, get recipe String from ProductNameAndRecipe HashTable
-                String recipeString = ProductNameAndRecipe.get(coffeeNameParsed);
+                String recipeString = productNameAndRecipe.get(coffeeNameParsed);
                 // Parse recipeString into separate material and quantity tokens (ex: 1x Espresso) using Utility class
                 ArrayList<String> recipeStringTokenized = utility.parseRecipe(recipeString);
 
