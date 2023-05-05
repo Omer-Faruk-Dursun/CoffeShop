@@ -96,7 +96,6 @@ public class Main {
                     recipeListOfProduct.add(new MaterialQuantity(material, materialQuantity));
                 }
 
-                // Building the Product object
                 Product product = new Product(coffeeNameParsed, coffeePriceParsed, recipeListOfProduct);
                 // Calling the toString method of Product object
                 System.out.println(product);
